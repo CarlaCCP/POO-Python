@@ -17,7 +17,7 @@ class Tv:
 
 
     def aplicar_desconto(self, desconto):
-        precoAntigo = self._Tv__preco
+        precoAntigo = self._Tv__preco #desfiguração de nome, atributo nao-publico
         descontoPreco = (precoAntigo * (desconto /100))
         precoNovo = precoAntigo - descontoPreco
         self.preco = precoNovo
@@ -27,6 +27,7 @@ tv_1 = Tv(43, 'FullHD', 'Samsung', 2400) #cria o objeto
 tv_2 = Tv(50, '4k', 'LG', 3200)
 print(f'Preço antigo: R$ {tv_1.preco:.2f}')
 tv_1.preco = 2160
-tv_1.aplicar_desconto(10)
+
 print(f'Preço novo: R$ {tv_1.preco:.2f}')
+print(vars(tv_1))
 
