@@ -52,6 +52,7 @@ for letra, numero in lista:
 dicionario_vazio = {}
 notas = {'Jack': 8.3, 'Anna': 9.0, 'Cris': 7.5}
 print(notas.get('Jack'))
+print(notas.keys)
 
 for chave in notas:
     print(chave, notas[chave])

@@ -196,7 +196,7 @@ def lista_armstrong(n):
             lista_armstrong.pop(conta)
         
     return(lista_armstrong)
-
+#print(lista_armstrong(300))
 
 def eh_perfeito(n):
     soma = 0

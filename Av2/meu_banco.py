@@ -1,3 +1,8 @@
+# Programação Orientada a Objetos
+# AC02 ADS-EaD - Criando classes
+#
+# Email Impacta: carla.paula@aluno.faculdadeimpacta.com.br
+
 class Cliente:
     def __init__(self,nome, telefone, email):
         self.__nome = nome
@@ -41,8 +46,8 @@ class Cliente:
             self.__telefone = novo_telefone  
        
 class Conta():
-    def __init__(self,Cliente, numero, saldo ):
-        self.__clientes = [Cliente]
+    def __init__(self,clientes, numero, saldo ):
+        self.__clientes = clientes
         self.__numero = numero
         self.__saldo = saldo
         self.__historico = []
@@ -85,7 +90,7 @@ class Conta():
 class Banco:
     def __init__ (self, nome):
         self.__nome = nome
-        self.__clientes = [Cliente]
+        self.__clientes = Cliente
         self.__contas = []
         self.__cont = 0 
     
@@ -100,8 +105,7 @@ class Banco:
     def abrir_conta(self, clientes, saldo_inicial):
         if saldo_inicial < 0:
             raise ValueError 
-        else:
-            
+        else:            
             self.__cont = len(self.__contas) + 1 #conta certo
             self.__contas.append(Conta([clientes],self.__cont, saldo_inicial))
 
